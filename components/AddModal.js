@@ -7,6 +7,7 @@ export default function AddModal({setModalVisible, modalVisible}) {
 
   const [text, onChangeText] = useState('');
   const [selectedValue, setSelectedValue] = useState('');
+  const [water, setWater] = useState('');
 
 
   return(
@@ -32,7 +33,10 @@ export default function AddModal({setModalVisible, modalVisible}) {
               <Text>
                 Water Needs:
               </Text>
-              <ModalDropdown options={['Twice a Day', 'Once a Day']}/>
+              <ModalDropdown
+              options={['Twice a Day', 'Once a Day']}
+              // onSelect={() => setWater(value)}
+              />
               <Text>
                 Sunlight Needs:
               </Text>
